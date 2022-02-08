@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Freehand&family=Lobster&family=Ubuntu:wght@300&display=swap');
+body{
+    background-image: -webkit-linear-gradient(65deg,#dfe6e9 50% , #f5f6fa 50% ,antiquewhite 10%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+h1{
+    font-family: 'Lobster', cursive;
+    color:red;
+}

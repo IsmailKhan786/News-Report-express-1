@@ -1,0 +1,15 @@
+<%- include("header") -%>
+    <ul>
+        <li>The testing the news app</li>
+      <%  for( var i =0;i<name.length;i++){ %>
+            <li> <%= name[i] %></li>
+       <% } %>
+    </ul>
+   
+    
+    
+    <form action = "/" method = "post">
+        <input type = "text" name = "sources">
+        <button type ="submit">Get Headlines</button>
+    </form>
+<%- include("footer") -%>
