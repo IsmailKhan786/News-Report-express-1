@@ -8,8 +8,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 app.set("view engine","ejs");
 var names=[];
+var description=[];
 app.get("/",function(req,res){
-     res.render("index",{name:names});
+     res.render("index",{name:names,description1:description});
 })
 app.post("/",function(req,res){
     source = req.body.sources;
@@ -20,6 +21,8 @@ app.post("/",function(req,res){
         var test =response.data;
         // res.json(response.data)
        var name = test.articles[0].title;
+       var  descriptions = test.articles[0].description;
+       description.push(descriptions);
         
         names.push(name);
         
@@ -30,6 +33,7 @@ app.post("/",function(req,res){
         res.json(error)
     })
 })
+
 
 
 
